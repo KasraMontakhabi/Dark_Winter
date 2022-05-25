@@ -21,7 +21,7 @@ class UserPosts(generic.ListView):
 
     def get_queryset(self):
         try:  # shows all posts of the logged in user
-            self.post.user = User.objects.prefetch_related("posts").get(username__iexact = self.kwargs.get("username")) #checks to see if the username  is
+            self.post_user = User.objects.prefetch_related("posts").get(username__iexact = self.kwargs.get("username")) #checks to see if the username  is
             # equal to the logged in user's username
         except User.DoesNotExist:
             raise Http404
@@ -49,7 +49,7 @@ class CreatePost(LoginRequiredMixin, SelectRelatedMixin,generic.CreateView):
         self.object = form.save(commit=False)
         self.object.user = self.request.user
         self.object.save()
-        return super().form_vaild(form)
+        return super().form_valid(form)
 class DeletePost(LoginRequiredMixin, SelectRelatedMixin,generic.DeleteView):
     model = models.Post
     select_related = ("user", "group")
