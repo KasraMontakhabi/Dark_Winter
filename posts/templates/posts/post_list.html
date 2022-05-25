@@ -10,6 +10,7 @@
 			<ul class="list-unstyled">
 
 				{% for member_group in get_user_groups %}
+				<!-- see user_groups in groups/models.GroupMember.user -->
 				<li class="group li-with-bullet">
 					<a href="{% url 'groups:single' slug=member_group.group.slug %}">{{ member_group.group.name }}</a>
 				</li>

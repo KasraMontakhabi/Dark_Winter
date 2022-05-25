@@ -1,4 +1,4 @@
-from email import message
+from django.contrib import messages
 from django.shortcuts import render
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse_lazy
@@ -60,5 +60,5 @@ class DeletePost(LoginRequiredMixin, SelectRelatedMixin,generic.DeleteView):
         return queryset.filter(user_id = self.request.user.id)
 
     def delete(self, *args, **kwargs):
-        message.success(self.request, "Post Deleted")
+        messages.success(self.request, "Post Deleted")
         return super().delete(*args, **kwargs)
