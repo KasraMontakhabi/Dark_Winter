@@ -15,7 +15,9 @@
     <!-- Alternative to Bootstrap 3 Glyphicons -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
-    <link href="https://fonts.googleapis.com/css2?family=My+Soul&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=New+Rocker&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="{% static 'Dark_Winter/css/master.css'%}">
 
@@ -40,11 +42,14 @@
         </div>
       </div>
     </nav>
-
-    <div class="container mycontent">
+    
+    
       {% block content %}
-
+      
       {% endblock %}
     </div>
+    <canvas id="canvas"></canvas>
+    <div id="note"></div>
   </body>
+  <script type="text/javascript" src="{% static 'Dark_Winter/js/master.js' %}"></script>
 </html>
