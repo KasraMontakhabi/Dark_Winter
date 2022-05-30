@@ -25,4 +25,4 @@ The following tasks can be done in this website:
 2. Login: After sign up, user will be redirected to the login page. There he/she can log in.
 3. Groups: User can create a group and join it. Also other users can join the mentioned group. Leaving the group is possible for user.
 4. Posts: User can select the his/her group and share a post. Posts can be deleted by user also. In this condition, users may redirect to a delete confirmation page.
-5. Drafts: There is a draft containing all deleted posts.
+
