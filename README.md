@@ -1,5 +1,5 @@
 # Dark_Winter
- Dark Winter is a social platform for heavy metal fans using Django, Django templates, HTML, CSS, Bootstrap, Javascript and sqlite3.
+ Dark Winter is a CRUD Django project and is designed as a social platform for heavy metal fans using Django, Django templates, HTML, CSS, Bootstrap, Javascript and sqlite3.
 ## Packages:
 - [Django](https://www.djangoproject.com/)
 - [Misaka](https://misaka.readthedocs.io/en/latest/)
